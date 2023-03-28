@@ -193,12 +193,18 @@ function capital($pays){
 
 function listHTML($nomListe, $elementListe){
 
-    echo "<h3>".$nomListe."</h3>". "<ul>";
-    for ($tours=0; $tours < count($elementListe) ; $tours++) { 
-        echo "<li>". $elementListe[$tours]. "</li>";
-    } 
+    if (empty($nomListe) == true || empty($elementListe) == true) {
+        echo "null";
+    } else {
+
+        echo "<h3>".$nomListe."</h3>". "<ul>";
+
+        for ($tours=0; $tours < count($elementListe) ; $tours++) { 
+            echo "<li>". $elementListe[$tours]. "</li>";
+            } 
     
-    echo "</ul>";
+        echo "</ul>";
+    }
 }
 
 
